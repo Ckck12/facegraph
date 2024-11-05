@@ -1,0 +1,24 @@
+csv: '/media/NAS/USERS/moonbo/faceGraph/data/ffpp_final_dataset.csv'
+seed: 42
+batch_size: 8
+epochs: 100
+lr: 0.001
+optimizer: Adam
+num_workers: 8
+model_config:
+  landmarks:
+    jawline: [0, 16]
+    left_eyebrow: [17, 21]
+    right_eyebrow: [22, 26]
+    nose: [27, 35]
+    left_eye: [36, 41]
+    right_eye: [42, 47]
+    outer_lip: [48, 59]
+    inner_lip: [60, 67]
+  LandmarkGAT:
+    dim: [32, 16, 16]
+    dropout: 0.2
+  global_nodes: 32
+  HtrgGAT:
+    dim: 16
+    temperature: 100.0
